@@ -1,1 +1,4 @@
 .idea/*
+*.log
+/Homework2/node_modules/
+/laradock-highload/
