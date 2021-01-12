@@ -1,0 +1,7 @@
+{
+    "name": "sbondarenko/homework3",
+    "require": {
+        "theiconic/php-ga-measurement-protocol": "^2.9",
+        "guzzlehttp/guzzle": "^7.2"
+    }
+}
