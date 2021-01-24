@@ -1,0 +1,9 @@
+FROM nginx:1.18
+
+RUN echo 'Europe/Kiev' > /etc/timezone
+
+COPY nginx-cache.conf /etc/nginx/nginx.conf
+
+CMD ["nginx", "-g", "daemon off;"]
+
+EXPOSE 8080

@@ -1,0 +1,13 @@
+FROM nginx:1.18
+
+RUN echo 'Europe/Kiev' > /etc/timezone
+
+COPY nginx-backend.conf /etc/nginx/nginx.conf
+
+CMD ["nginx", "-g", "daemon off;"]
+
+EXPOSE 8080
+
+WORKDIR /var/www/
+
+ADD public ./public

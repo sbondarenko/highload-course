@@ -1,0 +1,21 @@
+version: '3'
+
+volumes:
+  mysql:
+
+services:
+  nginx-cache:
+    build:
+      context: .
+      dockerfile: Dockerfile.cache
+    ports:
+      - "80:80"
+
+  nginx-backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./:/var/www:ro
